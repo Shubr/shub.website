@@ -6,24 +6,69 @@
 
 *{
     font-family: main;
-    background-color: #121212;
-    color:white;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+}
+.circle-background{
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    bottom: 40vh;
+    left: 150vh;
+    overflow: hidden;
+}
+
+#outer-circle{
+    width: 700px;
+    height: 700px;
+    background-color: #6b6b6b;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#iner-circle{
+    width: 500px;
+    height: 500px;
+    background-color: #b2b1b1;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#iner-iner-circle{
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 100%;
+}
+
+body{
+    background-image: linear-gradient(#151515, #121212);
+    transition: background-image 5s ease-in-out;
+    overflow-x: hidden;
+}
+
+
+#theme_mode h1{
+    transition: color 1s ease-in-out;
 }
 
 header{
     position: relative; 
     height: 100px;
+    display: grid;
 }
 nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     height: 100%;
 }
 nav h1{
     font-size: 40px;
+    color: #fff;
 }
 li{
     list-style: none;
@@ -31,5 +76,60 @@ li{
 a{
     text-decoration: none;
     font-size: 30px;
+    transition: color 1s ease-in;
+    color: #fff;
 }
 
+.main{
+    width: 100%;
+    height: 1200px;
+}
+footer{
+    width: 100%;
+    height: 200px;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+
+.window{
+    width: 900px;
+    height: 600px;
+    background-color: #d6d6d6;
+    border-radius: 2%;
+    border: 4px solid #000;
+    box-shadow: 10px 10px #232323;
+    transition: width 0.8s ease-in-out, height 0.8s ease-in-out;
+}
+
+.control{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    padding-right: 5px;
+    padding-top: 5px
+}
+
+#minimize{
+    width: 20px;
+    height: 20px;
+    background-color: #FBBC05;
+    border-radius: 100%;
+}
+#resize{
+    width: 20px;
+    height:20px;
+    background-color: #2fcb47;
+
+    border-radius: 100%;
+}
+#close{
+    width: 20px;
+    height: 20px;
+    background-color: #d42a2a;
+    border-radius: 100%;
+}
